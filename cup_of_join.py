@@ -1,14 +1,16 @@
-# Arguments :
-# args - Undefined number of lists
-# sep - random char
-# return value : list
-# This functions joins lists and between them appends the given char 'sep'
+"""
+ This functions joins lists and between them appends the given char 'sep'
+
+ @param args - Undefined number of lists
+ @param sep - random char
+ @return - list
+"""
+
+
 def join(*args, sep='-'):
-    if not args:
-        return None
+    [x.append(sep) for x in args]
 
-    list1 = []
-    [(list1.extend(x), list1.append(sep)) for x in args]
+    joined_list = [val for sublist in args for val in sublist]
+    joined_list.pop()
 
-    list1.pop()
-    return list1
+    return joined_list
