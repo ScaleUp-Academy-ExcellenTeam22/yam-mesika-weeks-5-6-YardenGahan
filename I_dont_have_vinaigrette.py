@@ -10,7 +10,7 @@ The program will print "I don't have Vinaigrette"
 """
 
 
-def str_time_prop(start, end, time_format, prop):
+def str_time_prop(start, end, time_format, prop) -> str:
     """
      This func is taken from GeeksForGeeks and used to turn the date str from user to date object.
      Then it's creating new time object which is the random date we want, and returns it as str.
